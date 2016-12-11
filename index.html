@@ -9,18 +9,19 @@
 <body ng-app="app1" ng-controller="imeControllera">
     
     <h1 id="n1">Naslov</h1>
-    
-    {{  varijabla   }}<br>
-        <br>
+
+   
 <br>
 <input type="number" ng-model="broj1"> <br>
-    <input type="number" ng-model="broj2"> <br>
-        <button ng-click ="broj1=''; broj2=''" >Clear</button>
-        {{ broj1+broj2}}
+<input type="number" ng-model="broj2"> <br>
+<button ng-click ="broj1=''; broj2=''" >Clear</button>
+       
+    {{ broj1+broj2 }}
     
-    <div ng-show="(broj1+broj2)>100">
-    Nesto
+    <div ng-show="(broj1+broj2)<100">
+    <img src="slika.jpg"></src>
     </div>
-    </body>
+
+</body>
 
 </html>
