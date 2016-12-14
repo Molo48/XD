@@ -1,0 +1,21 @@
+<h1>ovo je help page</h1>
+<div>
+Ime:
+<input ng-model="profil.firstname" /> <br>
+Prezime:
+<input ng-model="profil.lastname" /> <br>
+Godine:
+<input ng-model="profil.age" /> <br>
+Dodaj u inventar:
+<input ng-model="text" />  
+<button ng-click="submit()">Dodaj</button> <br>
+</div>
+
+
+
+<div id="ispis" ng-show='(profil.firstname!="" && profil.lastname!="" && profil.age!="" )'>
+<p>Vaše ime je {{profil.firstname}} {{profil.lastname}} i imate {{profil.age}} god.</p>
+</div>
+<div ng-repeat="x in profil.inventar">{{x}}</div>
+
+
