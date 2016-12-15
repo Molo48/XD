@@ -4,7 +4,7 @@
     
 <div class="ispis">
 <p ng-show="profil.firstname!='' && profil.lastname!='' && profil.age!=''">Vaše ime je {{profil.firstname}} {{profil.lastname}} i imate {{profil.age}} god.</p>
-<p>Popis inventara:</p>
+<p ng-show="profil.inventar!=''">Popis inventara:</p>
 <ul id="lista" ng-repeat="x in profil.inventar"><li>{{x}}</li></ul>
 </div>
 
