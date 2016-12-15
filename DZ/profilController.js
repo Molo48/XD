@@ -16,4 +16,3 @@ appModule.controller("profilController", function ($scope) {
       };
     
 });
-
