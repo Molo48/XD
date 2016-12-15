@@ -4,7 +4,7 @@
 
 		h1 {
             width: 350px;
-    padding: 5px;
+            padding: 5px;
 			color: red;
 			font-style: italic;
 			font-size: 140%;
@@ -14,24 +14,31 @@
         
         #uvjek{
             background-color:beige;
-            border-style: dashed;
+            border-style:double;
             text-align: center;
             position: fixed;
-            bottom: 0px;
+            top: 0px;
+            right: 0px;
         }
 body{
     background-color:azure;
+    width: 1000px;
     
 }
-#ispis{
-    
-    top:20px;
-    right:50px;
-    width: 350px;
-    border: 1px solid green;
-    
+.ispis{
+    float:right;
+    width: 250px;
 }
-div{
-    width: 350px;
-    border: 1px solid green;
+#lista{
+    list-style-type:disc;
+    font-style: italic;
+}
+.profil{
+    float:left;
+    width: 250px;
+}
+
+.wrapper{
+    width: 550px;
+  
 }

@@ -1,4 +1,4 @@
-appModule.controller("helpController", function ($scope) {
+appModule.controller("profilController", function ($scope) {
 
 	$scope.profil = {
         firstname: "",
