@@ -1,5 +1,3 @@
-// dokumentacija na https://docs.angularjs.org/api
-
 var appModule = angular.module("app1", ["ngRoute"]);
 
 appModule.config(function ($routeProvider, $locationProvider) {

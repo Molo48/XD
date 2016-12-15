@@ -1,25 +1,23 @@
-		.zeleno {
-			background-color: green;
-		}
 
-		h1 {
-            width: 350px;
-            padding: 5px;
-			color: red;
-			font-style: italic;
-			font-size: 140%;
-		}
 
-		
-        
-        #uvjek{
-            background-color:beige;
-            border-style:double;
-            text-align: center;
-            position: fixed;
-            top: 0px;
-            right: 0px;
-        }
+h1 {
+    width: 350px;
+    padding: 5px;
+    color: red;
+    font-style: italic;
+    font-size: 140%;
+}
+
+#uvjek{
+    background-color:beige;
+    border-style:double;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    font-size: 150%;
+}
+
 body{
     background-color:azure;
     width: 1000px;
@@ -29,10 +27,12 @@ body{
     float:right;
     width: 250px;
 }
+
 #lista{
     list-style-type:disc;
     font-style: italic;
 }
+
 .profil{
     float:left;
     width: 250px;
@@ -40,5 +40,4 @@ body{
 
 .wrapper{
     width: 550px;
-  
 }
