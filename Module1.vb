@@ -96,3 +96,36 @@ Module Module1
     End Sub
 
 End Module
+'.................................vj3
+Module Module1
+
+    Structure ComplexNumber
+        Dim real As Integer
+        Dim imag As Integer
+        Function zbroji(ByVal zaZbroj As ComplexNumber) As ComplexNumber
+
+            zbroji.real = real + zaZbroj.real
+            zbroji.imag = imag + zaZbroj.imag
+            Return zbroji
+        End Function
+    End Structure
+
+
+    Sub Main()
+        Dim Z1, Z2, x As ComplexNumber
+        Dim Z3 As ComplexNumber
+        Z1.real = 1
+        Z1.imag = 2
+
+        Z2.real = 1
+        Z2.imag = 2
+
+        Z3 = Z1.zbroji(Z2).zbroji(Z2)
+
+        
+        Console.WriteLine("Realin dio zbroja je {0}, imaginarni dio je {1}", Z3.real, Z3.imag)
+    End Sub
+
+
+
+End Module
