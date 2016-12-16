@@ -59,3 +59,40 @@
     End Sub
 
 End Module
+'.................................druga vjezba....................................
+Module Module1
+
+    Structure koordinata
+        Dim x As Integer
+        Dim y As Integer
+        Function udaljenost() As Double
+            Return Math.Sqrt((x * x) + (y * y))
+        End Function
+    End Structure
+
+
+    Sub Main()
+        Dim koodrinate As koordinata() = New koordinata() {}
+
+        Dim i As Integer = 0
+       
+
+        While True
+            unosKoordinate(koodrinate(i))
+            i = i + 1
+            If (koodrinate(i).x = 0 And koodrinate(i).y = 0) Then
+                Exit While
+            End If
+        End While
+
+    End Sub
+
+    Sub unosKoordinate(ByRef koord As koordinata)
+        Console.Write("Unesi x koordinatu: ")
+        koord.x = Console.ReadLine()
+
+        Console.Write("Unesi y koordinatu: ")
+        koord.y = Console.ReadLine()
+    End Sub
+
+End Module
