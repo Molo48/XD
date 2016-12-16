@@ -34,9 +34,16 @@
     End Sub
 
     Sub Main()
-        Dim x As Integer = 1
-        Dim matricaA As Integer(,) = New Integer(x, x) {}
-        Dim matricaB As Integer(,) = New Integer(x, x) {}
+        Dim x As Integer
+        Dim y As Integer
+        Console.WriteLine("Unesi velicinu prve matrice:")
+        x = Console.ReadLine()
+        y = Console.ReadLine()
+        Dim matricaA As Integer(,) = New Integer(x, y) {}
+        Console.WriteLine("Unesi velicinu druge matrice:")
+        x = Console.ReadLine()
+        y = Console.ReadLine()
+        Dim matricaB As Integer(,) = New Integer(x, y) {}
 
         Dim matricaC As Integer(,) = New Integer(x, x) {}
 
