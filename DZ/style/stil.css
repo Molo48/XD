@@ -39,3 +39,7 @@ body{
 .wrapper{
     width: 550px;
 }
+
+.bordered{
+    border: 1px;
+}
