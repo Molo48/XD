@@ -5,7 +5,7 @@
 <div class="ispis">
 <p ng-show="profil.firstname!='' && profil.lastname!='' && profil.age!=''">Vaše ime je {{profil.firstname}} {{profil.lastname}} i imate {{profil.age}} god.</p>
 <p ng-show="profil.inventar!='' ">Popis inventara:</p>
-<ul id="lista" ng-repeat="x in profil.inventar track by $index"><li>{{x.naziv}}</li></ul>
+<ul id="lista" ng-repeat="x in profil.inventar track by $index"><!--<li>{{x.naziv}}</li>--><date-display additional-text="profil.inventar[$index]"></date-display></ul>
 
 </div>
 
@@ -25,10 +25,12 @@ Serijski broj: <br>
 Kunska vrijednost: <br>
 <input ng-model="tempVal" type="number" /><br>  
 Opis:<br>
-<input ng-model="tempOpis" type="textarea" />  <br>
+<textarea ng-model="tempOpis" ></textarea>  <br>
 Dostupnost:<br>
 <input ng-model="tempDost" type="checkbox" />  
 <button ng-click="submit()">Dodaj</button> <br>
 </div>
     
+
+
 </div>

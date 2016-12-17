@@ -10,7 +10,8 @@ appModule.directive("dateDisplay",function(){
 		controller: dateDisplayController,
 		templateUrl: "directives/dateDisplay/dateDisplay.html",
 		scope: {
-			additionalText:"@"
+			additionalText:"="
+
 		}
 	};
 });

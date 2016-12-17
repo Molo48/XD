@@ -42,10 +42,10 @@ appModule.controller("profilController", function ($scope) {
       // };
 
 
-      $scope.text = '';
+     
       
       $scope.submit = function() {
-        if($scope.tempNaz && $scope.tempSer && $scope.tempVal && $scope.tempOpis){
+       // if($scope.tempNaz && $scope.tempSer && $scope.tempVal && $scope.tempOpis){
           $scope.profil.inventar.push({
           naziv : $scope.tempNaz,
           serBr : $scope.tempSer,
@@ -53,7 +53,12 @@ appModule.controller("profilController", function ($scope) {
           opis : $scope.tempOpis,
           dostup : $scope.tempDost
           });
-          }
+        $scope.tempNaz = '';
+        $scope.tempSer = '';
+        $scope.tempVal = '';
+        $scope.tempOpis = '';
+        $scope.tempDost = '';
+     //     }
         
       };
     
