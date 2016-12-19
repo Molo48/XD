@@ -5,13 +5,16 @@
 <div class="ispis">
 <p ng-show="profil.firstname!='' && profil.lastname!='' && profil.age!=''">Vaše ime je {{profil.firstname}} {{profil.lastname}} i imate {{profil.age}} god.</p>
 <p ng-show="profil.inventar!='' ">Popis inventara:</p>
-<ul id="lista" ng-repeat="x in profil.inventar track by $index"><!--<li>{{x.naziv}}</li>--><date-display additional-text="profil.inventar[$index]"></date-display></ul>
+<ul id="lista" ng-repeat="x in profil.inventar track by $index"><!--<li>{{x.naziv}}</li>-->
+	<date-display additional-text="x"></date-display>
+</ul>
 
 </div>
 
 <div class="profil">
 Ime:
 <input ng-model="profil.firstname" /> <br>
+<!-- <div ng-show="profil.firstname == ''">Ovo ne valja</div> -->
 Prezime:
 <input ng-model="profil.lastname" /> <br>
 Godine:
@@ -27,9 +30,14 @@ Kunska vrijednost: <br>
 Opis:<br>
 <textarea ng-model="tempOpis" ></textarea>  <br>
 Dostupnost:<br>
-<input ng-model="tempDost" type="checkbox" />  
-<button ng-click="submit()">Dodaj</button> <br>
-</div>
+<!-- <input ng-model="tempDost" type="checkbox" />  <br> -->
+<select ng-model="tempDost">
+	<option value="Dostupno">Dostupno</option>
+	<option value="Nedostupno">Nedostupno</option>
+
+</select>
+<button ng-click="submit()" ng-disabled="profil.firstname == ''">Dodaj</button> <br>
+</div> 
     
 
 
