@@ -53,6 +53,8 @@ appModule.controller("profilController", function ($scope) {
           opis : $scope.tempOpis,
           dostup : $scope.tempDost
           });
+
+
         $scope.tempNaz = '';
         $scope.tempSer = '';
         $scope.tempVal = '';
