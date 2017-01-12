@@ -1,4 +1,49 @@
+
+
+
 <h1>Ovo je random user stranica!</h1>
 
+<button ng-click="randomUserFetch()"> Učitaj ponovo </button>
+<br>
+<select ng-model='gender'>
+    <option value="0">Sve</option>
+    <option value="male">Musko</option>
+    <option value="female">Zensko</option>
+</select>
+
+<br>
+
+<select ng-model='nationality'>
+    <option value="0">Sve</option>
+    <option value="AU">AU</option>
+    <option value="BR">BR</option>
+    <option value="CA">CA</option>
+    <option value="CH">CH</option>
+    <option value="DE">DE</option>
+    <option value="DK">DK</option>
+    <option value="ES">ES</option>
+    <option value="FI">FI</option>
+    <option value="FR">FR</option>
+    <option value="GB">GB</option>
+    <option value="IE">IE</option>
+    <option value="IR">IR</option>
+    <option value="NL">NL</option>
+    <option value="NZ">NZ</option>
+    <option value="TR">TR</option>
+    <option value="US">US</option>
+</select>
+<br>
+
+<div class="user">
+Titula: {{ user.results[0].name.title }}  <br>
+Ime: {{ user.results[0].name.first }}  <br>
+Prezime: {{ user.results[0].name.last }}  <br>
+</div>
+
+
+Spol: {{ user.results[0].gender }} <br>
+Nacionalnost: {{ user.results[0].nat }}  <br>
+
+<br><br>
 
 

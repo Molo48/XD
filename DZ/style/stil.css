@@ -43,3 +43,7 @@ body{
 .bordered{
     border: 1px;
 }
+
+.user{
+    text-transform: capitalize;
+}

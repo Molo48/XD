@@ -1,6 +1,4 @@
-//moramo je uključit u index.html
-appModule.controller("randomUserController", function ($scope,$http) {
-	// kod koji se bude nalazio unutar tijela ove funkcije je kod 'homeController' kontrolera
+angular.factory('randomiserServices', function(){
 
 $scope.gender="0";
 $scope.nationality="0";
@@ -16,6 +14,5 @@ $scope.nationality="0";
     		});
 
     };
+
 });
-
-
