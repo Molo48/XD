@@ -1,0 +1,157 @@
+'Class Ratnik
+'    Public ime As String
+'    Private atk As Integer
+
+'    Sub New(ByVal naziv As String, ByVal snaga As Integer)
+'        ime = naziv
+'        atk = snaga
+'    End Sub
+
+'    Public Sub Napad()
+'        Console.WriteLine("{0} oduzima {1} HP od Skeletona macem!", ime, atk)
+'    End Sub
+
+'    Public Property snagaUdarca() As Integer
+'        Get
+'            Return atk
+'        End Get
+'        Set(value As Integer)
+'            If (value > 0 And value < 10) Then
+'                atk = value
+'            End If
+'        End Set
+'    End Property
+
+'    Public Sub SetAtk(ByVal snaga As Integer)
+'        If (snaga > 0 And snaga < 10) Then
+'            atk = snaga
+'        End If
+
+
+'    End Sub
+'    MustInherit Sub napad()
+
+'    End Sub
+
+'End Class
+
+'Class Mage
+'    Inherits Ratnik
+
+'    Sub New(ByVal naziv As String, ByVal snaga As Integer)
+'        MyBase.New(naziv, snaga)
+'    End Sub
+
+'    Public Overrides Sub Napad()
+'        Console.WriteLine("{0} oduzima {1} HP od Skeletona magijom!", ime, snagaUdarca)
+'    End Sub
+
+
+'End Class
+
+'Module Module1
+
+'    Sub Main()
+'        Dim ratnik1 As Ratnik = New Ratnik("Xilion", 4)
+'        Dim Mage1 As Mage = New Mage("Molo", 2)
+'        ratnik1.Napad()
+'        Mage1.Napad()
+
+
+
+'    End Sub
+
+'End Module
+
+Class BankAccount
+    Private acctNumber As Long
+    Private acctBalance As Decimal
+    Private acctOwner As String
+
+    Private Property GetAcctNumber() As Long
+        Get
+            Return acctNumber
+        End Get
+        Set(value As Long)
+            acctNumber = value
+        End Set
+    End Property
+
+    Private Property GetAcctOwner() As String
+        Get
+            Return acctOwner
+        End Get
+        Set(value As String)
+            acctOwner = value
+        End Set
+    End Property
+
+    Private Property GetAcctBalance()
+        Get
+            Return acctBalance
+        End Get
+        Set(value)
+            acctBalance = value
+        End Set
+    End Property
+
+    Sub createAccount(ByVal acctNumberValue As Long, ByVal acctOwnerValue As String)
+        acctNumber = acctNumberValue
+        acctOwner = acctOwnerValue
+    End Sub
+
+    Function Withdraw(ByVal took As Decimal) As Boolean
+        If (took > acctBalance) Then
+            Return 0
+        Else
+            acctBalance = acctBalance - took
+            Return 1
+        End If
+
+    End Function
+
+    Function Deposit(ByVal put As Decimal) As Boolean
+        acctBalance = acctBalance + put
+        Return 1
+    End Function
+End Class
+
+
+Module Module1
+    Sub provjeraTransakcije(ByVal provjera As Boolean)
+        If (provjera = False) Then
+            Console.WriteLine("Transakcija nije provedena.")
+        ElseIf (provjera = True) Then
+            Console.WriteLine("Transakcija provedena.")
+        End If
+    End Sub
+
+    Function UnosImena() As String
+        Dim ime As String
+        Console.WriteLine("Unesite ime novog korisnika:")
+        ime = Console.ReadLine()
+        Return ime
+    End Function
+
+    Function UnosBroja() As Long
+        Dim broj As Long
+        Console.WriteLine("Unesite ime broj racuna novog korisnika:")
+        broj = Console.ReadLine()
+        Return broj
+    End Function
+
+    Function NoviAccount(ByVal korisnik As BankAccount) As BankAccount
+        korisnik.createAccount(UnosBroja(), UnosImena())
+        'zavrsit
+    End Function
+
+    Sub Main()
+        Dim Korisnik1 As BankAccount = New BankAccount()
+        Dim unos As Decimal
+        'ovdje fali jos dosta toga
+        'izbornik
+        'select case
+        provjeraTransakcije(Korisnik1.Deposit(unos))
+        provjeraTransakcije(Korisnik1.Withdraw(unos))
+    End Sub
+End Module
